@@ -1,0 +1,31 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>{% block title %}{% endblock %}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+	<body class="font-sans leading-normal tracking-normal mx-5">
+		<header class="container">
+			<nav class="my-6 flex flex-row justify-between">
+				<div>
+					<span>Logo</span>
+				</div>
+				<div class="flex flex-row">
+					<ul class="flex flex-row">
+						<li class="mx-2"><a href="#">About</a></li>
+						<li class="mx-2"><a href="#">Contact Me</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<section class="flex items-center justify-center">
+				{% block content %}{% endblock %}
+			</section>
+		</div>
+	</body>
+</html>
